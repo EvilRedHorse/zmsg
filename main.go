@@ -155,7 +155,7 @@ func CheckMessages(noconf bool) ([]*Message, error) {
 	return allmsgs, nil
 }
 
-var ErrNoAddresses = fmt.Errorf("no addresses to send message from! (create one with the zcash-cli)")
+var ErrNoAddresses = fmt.Errorf("no addresses to send message from! (create one with the votecoin-cli)")
 
 // SendMessage sends a message to a given zcash address using a shielded transaction.
 // It returns the transaction ID.
@@ -178,7 +178,7 @@ func SendMessage(from, to, msg string, msgval float64) (string, error) {
 	req := &rpc.Request{
 		Method: "z_sendmany",
 		Params: []interface{}{
-			from, // first parameter is address to send from (where the ZEC comes from)
+			from, // first parameter is address to send from (where the VOT comes from)
 			[]interface{}{
 				map[string]interface{}{
 					"amount":  msgval,

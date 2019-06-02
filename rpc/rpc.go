@@ -38,7 +38,7 @@ type Client struct {
 }
 
 var DefaultClient = &Client{
-	Host: "http://localhost:8232",
+	Host: "http://localhost:8242",
 }
 
 func Do(obj *Request, out interface{}) error {
@@ -66,7 +66,7 @@ func (c *Client) Do(obj *Request, out interface{}) error {
 	resp, err := http.DefaultClient.Do(req)
 	if err != nil {
 		if strings.Contains(err.Error(), "connection refused") {
-			return fmt.Errorf("failed to connect to zcash daemon, is it running?")
+			return fmt.Errorf("failed to connect to votecoin daemon, is it running?")
 		}
 		return err
 	}
