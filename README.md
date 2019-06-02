@@ -1,14 +1,14 @@
 # zmsg
-A zero knowledge messaging system built on zcash.
+A zero knowledge messaging system built on zcash and forked for votecoin.
 
-zmsg uses the encrypted memo field of zcash sheilded transactions to send
-messages to other parties. The sent messages get stored in the zcash blockchain
+zmsg uses the encrypted memo field of votecoin sheilded transactions to send
+messages to other parties. The sent messages get stored in the votecoin blockchain
 and the recipient can check for messages at any time (no need to be online at
 the same time). Since the messages get stored in the blockchain, they are on
-*every* full zcash node. The implication here is that its not possible to tell
+*every* full votecoin node. The implication here is that its not possible to tell
 who the target of any given message is.
 
-Currently, each message sends 0.0001 ZEC. You can change this value by setting
+Currently, each message sends 0.0001 VOT. You can change this value by setting
 the `--txval` flag on `sendmsg`.
 
 ## Installation
@@ -18,8 +18,10 @@ go get github.com/whyrusleeping/zmsg
 ```
 
 ## Usage
-Note: To use zmsg, you'll need a running zcash daemon, a z_address, and some
-spare ZEC in that address.
+Note: To use zmsg, you'll need a running votecoin daemon, a z_address, and some
+spare VOT in that address.
+
+### Warning - Below is a zcash address that will not work with this fork which uses votecoin addresses ###
 
 ### sendmsg
 To send a message, use `zmsg sendmsg`:
@@ -57,7 +59,6 @@ To check for messages, run `zmsg check`:
 |  This is message number 'two', i'm sitting in a coffee shop. Don't tell anyone.
 ================================================================================
 ```
-
 ## Send me a message!
 If you're trying this out and want to say hi, send me a message at `zchfvC6iubfsAxaNrbM4kkGDSpwjafECjqQ1BZBFXtotXyXARz2NoYRVEyfLEKGCFRY7Xfj2Q3jFueoHHmQKb63C3zumYnU`.
 
