@@ -14,7 +14,7 @@ the `--txval` flag on `sendmsg`.
 ## Installation
 First, make sure you have [go](https://golang.org/doc/install) installed, then:
 ```sh
-go get github.com/whyrusleeping/zmsg
+go get github.com/EvilRedHorse/zmsg
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ spare VOT in that address.
 ### sendmsg
 To send a message, use `zmsg sendmsg`:
 ```sh
-$ export TARGET_ZADDR=zchfvC6iubfsAxaNrbM4kkGDSpwjafECjqQ1BZBFXtotXyXARz2NoYRVEyfLEKGCFRY7Xfj2Q3jFueoHHmQKb63C3zumYnU
+$ export TARGET_ZADDR=zs1r57w2scma5q8sy8p63ql5nk6t69uw305fw2sdm20az2z3zx50uadus2kkccy767py9n6j5u78tx
 $ zmsg sendmsg -to=$TARGET_ZADDR "Hello zmsg! welcome to pretty secure messaging"
 message: "Hello zmsg! welcome to pretty secure messaging"
 sending message from <your z_addr>
@@ -47,20 +47,20 @@ To check for messages, run `zmsg check`:
 > Got 2 messages.
 ================================================================================
 | Message #0 (val = 0.000010)
-| To: zchfvC6iubfsAxaNrbM4kkGDSpwjafECjqQ1BZBFXtotXyXARz2NoYRVEyfLEKGCFRY7Xfj2Q3jFueoHHmQKb63C3zumYnU
+| To: zs1r57w2scma5q8sy8p63ql5nk6t69uw305fw2sdm20az2z3zx50uadus2kkccy767py9n6j5u78tx
 | Date: 2016-11-11 17:36:31 -0800 PST
 |
 |  This is a test of zmsg, hello everyone!
 ================================================================================
 | Message #1 (val = 0.000010)
-| To: zchfvC6iubfsAxaNrbM4kkGDSpwjafECjqQ1BZBFXtotXyXARz2NoYRVEyfLEKGCFRY7Xfj2Q3jFueoHHmQKb63C3zumYnU
+| To: zs1r57w2scma5q8sy8p63ql5nk6t69uw305fw2sdm20az2z3zx50uadus2kkccy767py9n6j5u78tx
 | Date: 2016-11-11 17:44:44 -0800 PST
 |
 |  This is message number 'two', i'm sitting in a coffee shop. Don't tell anyone.
 ================================================================================
 ```
 ## Send me a message!
-If you're trying this out and want to say hi, send me a message at `zchfvC6iubfsAxaNrbM4kkGDSpwjafECjqQ1BZBFXtotXyXARz2NoYRVEyfLEKGCFRY7Xfj2Q3jFueoHHmQKb63C3zumYnU`.
+If you're trying this out and want to say hi, send me a message at `zs1r57w2scma5q8sy8p63ql5nk6t69uw305fw2sdm20az2z3zx50uadus2kkccy767py9n6j5u78tx`.
 
 ## License
-MIT, whyrusleeping
+MIT, EvilRedHorse, original author: whyrusleeping

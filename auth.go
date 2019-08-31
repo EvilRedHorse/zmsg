@@ -6,8 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
-
-	rpc "github.com/whyrusleeping/zmsg/rpc"
+	rpc "github.com/EvilRedHorse/zmsg/rpc"
 )
 
 func init() {

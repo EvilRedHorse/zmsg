@@ -10,7 +10,7 @@ import (
 	"time"
 
 	cli "github.com/urfave/cli"
-	rpc "github.com/whyrusleeping/zmsg/rpc"
+	rpc "github.com/EvilRedHorse/zmsg/rpc"
 )
 
 var Verbose = false
@@ -135,7 +135,7 @@ func getReceivedForAddr(addr string, noconf bool) ([]*Message, error) {
 	return msgs, nil
 }
 
-// CheckMessages returns all messages that the local zcash daemon has received
+// CheckMessages returns all messages that the local votecoin daemon has received
 func CheckMessages(noconf bool) ([]*Message, error) {
 	addrs, err := getMyAddresses()
 	if err != nil {
@@ -157,7 +157,7 @@ func CheckMessages(noconf bool) ([]*Message, error) {
 
 var ErrNoAddresses = fmt.Errorf("no addresses to send message from! (create one with the votecoin-cli)")
 
-// SendMessage sends a message to a given zcash address using a shielded transaction.
+// SendMessage sends a message to a given votecoin address using a shielded transaction.
 // It returns the transaction ID.
 func SendMessage(from, to, msg string, msgval float64) (string, error) {
 	if from == "" {
@@ -340,7 +340,7 @@ var SendCmd = cli.Command{
 		cli.Float64Flag{
 			Name:  "txval",
 			Value: 0.00001,
-			Usage: "specify the amount of ZEC to send with messages.",
+			Usage: "specify the amount of VOT to send with messages.",
 		},
 	},
 	Action: func(c *cli.Context) error {
@@ -369,9 +369,9 @@ var SendCmd = cli.Command{
 
 func main() {
 	app := cli.NewApp()
-	app.Version = "0.1.0"
-	app.Author = "whyrusleeping"
-	app.Email = "why@ipfs.io"
+	app.Version = "0.1.1"
+	app.Author = "EvilRedHorse"
+	app.Email = "evilredhorse@gmail.com"
 	app.Usage = "send and receive zero knowledge messages"
 	app.Commands = []cli.Command{
 		CheckCmd,
