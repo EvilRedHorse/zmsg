@@ -21,8 +21,6 @@ go get github.com/EvilRedHorse/zmsg
 Note: To use zmsg, you'll need a running votecoin daemon, a z_address, and some
 spare VOT in that address.
 
-### Warning - Below is a zcash address that will not work with this fork which uses votecoin addresses ###
-
 ### sendmsg
 To send a message, use `zmsg sendmsg`:
 ```sh
