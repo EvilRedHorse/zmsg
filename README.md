@@ -8,7 +8,7 @@ the same time). Since the messages get stored in the blockchain, they are on
 *every* full votecoin node. The implication here is that its not possible to tell
 who the target of any given message is.
 
-Currently, each message sends 0.0001 VOT. You can change this value by setting
+Currently, each message sends 0.00011 VOT. You can change this value by setting
 the `--txval` flag on `sendmsg`.
 
 ## Installation
