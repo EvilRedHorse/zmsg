@@ -339,7 +339,7 @@ var SendCmd = cli.Command{
 		},
 		cli.Float64Flag{
 			Name:  "txval",
-			Value: 0.00001,
+			Value: 0.00011,
 			Usage: "specify the amount of VOT to send with messages.",
 		},
 	},
