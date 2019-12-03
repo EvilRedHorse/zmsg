@@ -374,8 +374,8 @@ func main() {
 	app.Email = "evilredhorse@gmail.com"
 	app.Usage = "send and receive zero knowledge messages"
 	app.Commands = []cli.Command{
-		CheckCmd,
-		SendCmd,
+		&CheckCmd,
+		&SendCmd,
 	}
 
 	err := app.Run(os.Args)
