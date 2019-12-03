@@ -289,7 +289,7 @@ func WaitForOperation(opid string) (string, error) {
 	return "", nil
 }
 
-var CheckCmd = cli.Command{
+var CheckCmd = &cli.Command{
 	Name:  "check",
 	Usage: "check for messages.",
 	Flags: []cli.Flag{
@@ -325,7 +325,7 @@ var CheckCmd = cli.Command{
 	},
 }
 
-var SendCmd = cli.Command{
+var SendCmd = &cli.Command{
 	Name:  "sendmsg",
 	Usage: "send a message to another zmsg user.",
 	Flags: []cli.Flag{
@@ -339,7 +339,7 @@ var SendCmd = cli.Command{
 		},
 		cli.Float64Flag{
 			Name:  "txval",
-			Value: 0.00011,
+			Value: "0.00011",
 			Usage: "specify the amount of VOT to send with messages.",
 		},
 	},
