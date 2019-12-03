@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	cli "github.com/urfave/cli/v2"
+	"github.com/urfave/cli/v2"
 	rpc "github.com/EvilRedHorse/zmsg/rpc"
 )
 
@@ -289,15 +289,15 @@ func WaitForOperation(opid string) (string, error) {
 	return "", nil
 }
 
-var CheckCmd = &cli.Command{
+var CheckCmd = cli.Command{
 	Name:  "check",
 	Usage: "check for messages.",
 	Flags: []cli.Flag{
-		cli.BoolFlag{
+		&cli.BoolFlag{
 			Name:  "verbose",
 			Usage: "enable verbose log output",
 		},
-		cli.BoolFlag{
+		&cli.BoolFlag{
 			Name:  "noconf",
 			Usage: "show messages with no transaction confirmations",
 		},
@@ -325,19 +325,19 @@ var CheckCmd = &cli.Command{
 	},
 }
 
-var SendCmd = &cli.Command{
+var SendCmd = cli.Command{
 	Name:  "sendmsg",
 	Usage: "send a message to another zmsg user.",
 	Flags: []cli.Flag{
-		cli.StringFlag{
+		&cli.StringFlag{
 			Name:  "from",
 			Usage: "address to send message from",
 		},
-		cli.StringFlag{
+		&cli.StringFlag{
 			Name:  "to",
 			Usage: "address to send message to",
 		},
-		cli.Float64Flag{
+		&cli.Float64Flag{
 			Name:  "txval",
 			Value: "0.00011",
 			Usage: "specify the amount of VOT to send with messages.",
@@ -374,8 +374,8 @@ func main() {
 	app.Email = "evilredhorse@gmail.com"
 	app.Usage = "send and receive zero knowledge messages"
 	app.Commands = []cli.Command{
-		CheckCmd,
-		SendCmd,
+		&CheckCmd,
+		&SendCmd,
 	}
 
 	err := app.Run(os.Args)
