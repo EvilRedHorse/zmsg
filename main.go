@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	cli "github.com/urfave/cli"
+	cli "github.com/urfave/cli/v2"
 	rpc "github.com/EvilRedHorse/zmsg/rpc"
 )
 
